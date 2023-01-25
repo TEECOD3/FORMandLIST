@@ -1,0 +1,19 @@
+.courseitem {
+  width: 28rem;
+  height: 3rem;
+  background-color: rgb(168, 86, 245);
+  margin: 2rem auto;
+  padding: 1rem;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 10px;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 50em) {
+  .courseitem {
+    width: 18rem;
+  }
+}

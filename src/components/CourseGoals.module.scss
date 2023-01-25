@@ -1,0 +1,57 @@
+.courseGoals {
+  display: flex;
+  justify-content: center;
+  width: 30rem;
+  margin: 5rem auto 0 auto;
+
+  &__content {
+    padding: 2rem;
+    width: 80%;
+    margin: 0 auto;
+    // background-color: red;
+
+    .button {
+      margin-left: 1em;
+    }
+    .courseinputs {
+      padding: 1em;
+      &__controls {
+        width: 100%;
+        margin-top: 1em;
+        label {
+          display: block;
+          font-size: 1.5em;
+          margin-bottom: 0.2em;
+          text-transform: capitalize;
+        }
+
+        input {
+          width: 100%;
+          padding: 0.4em;
+          border-radius: 10px;
+          border: grey 1px solid;
+          &:focus {
+            outline: none;
+            background: rgb(253, 238, 238);
+          }
+        }
+        &.invalid input {
+          border: red 1px solid;
+          background: rgba(247, 215, 215, 0.945);
+        }
+        &.invalid label {
+          color: rgb(190, 29, 29);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 50em) {
+  .courseGoals {
+    width: 20rem;
+    .button {
+      width: 5rem;
+    }
+  }
+}

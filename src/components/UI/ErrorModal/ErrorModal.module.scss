@@ -1,0 +1,48 @@
+.error {
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 8;
+  background-color: azure;
+  border-radius: 20px;
+  overflow: hidden;
+
+  h1 {
+    padding: 1em;
+    background-color: rgb(140, 70, 206);
+    width: 100%;
+  }
+  p {
+    padding: 2em;
+    font-size: 1rem;
+    text-transform: capitalize;
+
+    width: inherit;
+    text-align: center;
+  }
+  .btn {
+    width: inherit;
+    padding: 1em;
+  }
+  .errbtn {
+    padding: 1em;
+  }
+}
+.backdrop {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+@media (max-width: 50em) {
+  .error {
+    width: 18rem;
+  }
+}
