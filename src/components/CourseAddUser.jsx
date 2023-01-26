@@ -1,29 +1,34 @@
 import classes from "./CourseGoals.module.scss";
-import { Fragment, React, useState } from "react";
+import { Fragment, React, useState, Ref, useRef } from "react";
 import Button from "./UI/Buttons/button";
 import Card from "./UI/Cards/card";
 import ErrorModal from "./UI/ErrorModal/ErrorModal";
 
 function CourseGoals({ addedcourse }) {
-  const [username, setUsername] = useState("");
-  const [age, setAge] = useState("");
+  // const [username, setUsername] = useState("");
+  // const [age, setAge] = useState("");
+  const userNameRef = useRef();
+  const AgeRef = useRef();
   const [valid, setValid] = useState(true);
   const [error, SetError] = useState();
 
-  const usernameHandler = (event) => {
-    if (event.target.value.length > 0) {
-      setValid(true);
-    }
-    setUsername(event.target.value);
-  };
-  const ageHandler = (event) => {
-    if (event.target.value.length > 0) {
-      setValid(true);
-    }
-    setAge(event.target.value);
-  };
+  // const usernameHandler = (event) => {
+  //   if (event.target.value.length > 0) {
+  //     setValid(true);
+  //   }
+  //   setUsername(event.target.value);
+  // };
+  // const ageHandler = (event) => {
+  //   if (event.target.value.length > 0) {
+  //     setValid(true);
+  //   }
+  //   setAge(event.target.value);
+  // };
   const sumitHandler = (event) => {
     event.preventDefault();
+
+    const username = userNameRef.current.value;
+    const age = AgeRef.current.value;
 
     if (username.trim().length === 0 || age.trim().length === 0) {
       setValid(false);
@@ -50,8 +55,11 @@ function CourseGoals({ addedcourse }) {
       };
 
       addedcourse(dataCollected);
-      setUsername("");
-      setAge("");
+      // setUsername("");
+      // setAge("");
+
+      userNameRef.current.value = "";
+      AgeRef.current.value = "";
     }
   };
 
@@ -79,9 +87,11 @@ function CourseGoals({ addedcourse }) {
               >
                 <label htmlFor="labelname">coursename</label>
                 <input
-                  value={username}
-                  onChange={usernameHandler}
+                  // value={username}
+                  // onChange={usernameHandler}
+                  id="coursename"
                   type="text"
+                  ref={userNameRef}
                 />
               </div>
               <div
@@ -90,7 +100,13 @@ function CourseGoals({ addedcourse }) {
                 }`}
               >
                 <label htmlFor="age">Age(years)</label>
-                <input value={age} onChange={ageHandler} type="number" />
+                <input
+                  // value={age}
+                  // onChange={ageHandler}
+                  type="number"
+                  id="age"
+                  ref={AgeRef}
+                />
               </div>
             </div>
 
