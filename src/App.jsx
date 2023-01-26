@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import CourseAddUser from "./components/courseAddUser";
+import CourseAddUser from "./components/CourseAddUser";
 import classes from "./App.module.scss";
 import Courselist from "./components/Courselists/Courselist";
-import Error from "./components/UI/ErrorModal/ErrorModal";
 
 const courses = [
   { courseNames: "english", ages: 34, id: 9203 },
