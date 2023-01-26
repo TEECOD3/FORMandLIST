@@ -1,10 +1,10 @@
-import classes from "./CourseGoals.module.scss";
+import classes from "./CourseAddUser.module.scss";
 import { Fragment, React, useState, Ref, useRef } from "react";
 import Button from "./UI/Buttons/button";
 import Card from "./UI/Cards/card";
 import ErrorModal from "./UI/ErrorModal/ErrorModal";
 
-function CourseGoals({ addedcourse }) {
+function CourseAddUser({ addedcourse }) {
   // const [username, setUsername] = useState("");
   // const [age, setAge] = useState("");
   const userNameRef = useRef();
@@ -120,4 +120,4 @@ function CourseGoals({ addedcourse }) {
   );
 }
 
-export default CourseGoals;
+export default CourseAddUser;

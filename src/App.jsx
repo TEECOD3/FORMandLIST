@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CourseGoals from "./components/courseGoals";
+import CourseAddUser from "./components/courseAddUser";
 import classes from "./App.module.scss";
 import Courselist from "./components/Courselists/Courselist";
 import Error from "./components/UI/ErrorModal/ErrorModal";
@@ -21,7 +21,7 @@ function App() {
   return (
     <React.Fragment>
       <div className={classes.App}>
-        <CourseGoals addedcourse={courseadded} />
+        <CourseAddUser addedcourse={courseadded} />
         <Courselist courses={course} />
       </div>
     </React.Fragment>
