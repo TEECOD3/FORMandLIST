@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import Courseitem from "./courseitem";
+import Courseitem from "./Courseitem";
 import classes from "./Courselist.module.scss";
 
 function Courselist({ courses }) {

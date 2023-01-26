@@ -1,7 +1,7 @@
 import classes from "./CourseAddUser.module.scss";
-import { Fragment, React, useState, Ref, useRef } from "react";
+import { Fragment, React, useState, useRef } from "react";
 import Button from "./UI/Buttons/Button";
-import Card from "./UI/Cards/card";
+import Card from "./UI/Cards/Card";
 import ErrorModal from "./UI/ErrorModal/ErrorModal";
 
 function CourseAddUser({ addedcourse }) {
