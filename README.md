@@ -1,6 +1,5 @@
 # FORMandLIST
-Simple form to collect data and add it to a list of items, With basic form validation
-using React js
+learnt about  react fragments , react portals and refs
 
 
 # Netflify Link to view peoject
